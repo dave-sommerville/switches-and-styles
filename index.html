@@ -39,14 +39,28 @@
 			</p>
 	<p class="status"></p> 
 		</section>
-		<section>
+		<section class="radio-display">
 			<h2>Radio</h2>
+			<div class="radio-buttons">
+				<label>
+					<input type="radio" name="option" value="1" id="option1">
+					<div class="color-display one"></div>
+				</label>
+				<label>
+					<input type="radio" name="option" value="2" id="option2">
+					<div class="color-display two"></div>
+				</label>
+				<label>
+					<input type="radio" name="option" value="3" id="option3">
+					<div class="color-display three"></div>
+				</label>
+			</div>
 		</section>
-		<section class="analog">
+		<section class="slider-display">
 			<h2>Analog</h2>												
 			<div class="slider-container">
 				<input type="range" class="slider" min="0" max="100" value="50">
-					<p>Value: <span class="slider-value">50</span></p>
+					<p><span class="slider-value">50</span>%</p> <!-- This should be calculated-->
 			</div>
 		</section>
 		</main>
