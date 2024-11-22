@@ -1,13 +1,11 @@
-
 <html lang="en">
-  
 <head>
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Dave Sommerville">
   <meta name="description" content="Explore Unreal City - a hub for web development and design tips. Learn HTML, CSS, JavaScript, and more.">
   <meta name="theme-color" content="#ffffff">
-  <title>Script Scavenger | Typing Game</title>
+  <title>Controls and Styles</title>
   <link rel="icon" href="./src/img/favicon.png" type="image/x-icon">
   <!--  External stylesheets -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +17,38 @@
   <link rel="stylesheet" href="./src/css/reset.css" media="all">
   <link rel="stylesheet" href="./src/css/style.css" media="all">
   <script src="./src/js/app.js" defer></script>  
-
 </head>
+<body>
+	<header>
+		<h1></h1>
+	</header>
+	<main class="flex f-col">
+		<section class="shape-container flex">
+			<div class="target-shape">
+		</section>
+		<section class="toggle-display"> 
+			<h2>Toggle</h2>
+			<div class="toggle-container">
+				<input type="checkbox" id="toggle" class="toggle-checkbox">
+				<label for="toggle" class="toggle-label">
+					<span class="toggle-ball"></span>
+				</label>
+			</div>
+			<p>
 
-<body>	
+			</p>
+	<p class="status"></p> 
+		</section>
+		<section>
+			<h2>Radio</h2>
+		</section>
+		<section class="analog">
+			<h2>Analog</h2>												
+			<div class="slider-container">
+				<input type="range" class="slider" min="0" max="100" value="50">
+					<p>Value: <span class="slider-value">50</span></p>
+			</div>
+		</section>
+		</main>
+</body>
+</html>

@@ -1,1 +1,141 @@
 @charset "utf-8";
+
+.flex{
+	display: flex;
+}
+.f-col {
+	flex-direction: column;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+main {
+	justify-content: center;
+	align-items: center;
+}
+
+.shape-container {
+	height: 50svh;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.target-shape {
+	width: 200px;
+	height: 200px;
+	background-color: #daf;
+}
+
+/*-------------------------------------------------->
+
+
+
+<---------------------------------------------------*/
+
+.toggle-display {
+}
+.toggle-container {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+
+/* Hidden checkbox */
+.toggle-checkbox {
+  display: none;
+}
+
+/* Label (outer oval) */
+.toggle-label {
+  display: block;
+  background-color: grey;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Ball (inner circle) */
+.toggle-ball {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Toggle on styles */
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #4caf50; /* Greenish-blue */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-ball {
+  transform: translateX(30px);
+}
+
+
+
+/*-------------------------------------------------->
+
+
+
+<---------------------------------------------------*/
+
+/* Slider container */
+.slider-container {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Slider styling */
+.slider {
+	/* Remove default styling for webkit browsers */
+  -webkit-appearance: none; 
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Slider thumb styling */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0077b5; /* For the 'thumb'*/
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0077b5;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Change slider bar color on hover or active */
+.slider:active {
+  background: #91d5e8;
+}
+
+
