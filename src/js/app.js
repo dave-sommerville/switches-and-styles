@@ -1,4 +1,9 @@
 'use strict';
+/*-------------------------------------------------->
+UTILITY FUNCTIONS
+
+
+<---------------------------------------------------*/
 
 function select(selector, scope = document) {
   return scope.querySelector(selector);
@@ -7,12 +12,24 @@ function select(selector, scope = document) {
 function listen(event, element, callback) {
   return element.addEventListener(event, callback);
 }
+
+/*-------------------------------------------------->
+ELEMENT DECLARATIONS
+
+
+<---------------------------------------------------*/
+
 const targetShape = select('.target-shape');
 const toggle = select("#toggle");
-const statusText = select(".status");
 const slider = select(".slider");
 const sliderValue = select(".slider-value");
+const radioButtons = document.querySelectorAll('input[name="option"]');
 
+/*--------------------------------------------------->
+EVENT OBSERVER - TOGGLE CONTROL
+
+
+<---------------------------------------------------*/
 
 listen("change", toggle, () => {
 	if(toggle.checked) {
@@ -22,9 +39,12 @@ listen("change", toggle, () => {
 	}
 });
 
-const radioButtons = document.querySelectorAll('input[name="option"]');
+/*-------------------------------------------------->
+EVENT OBSERVER - RADIO CONTROL
 
-/* Found with ChatGPT, but altered for my purposes */
+Found with ChatGPT, but altered for my purposes 
+
+<---------------------------------------------------*/
 
 radioButtons.forEach((radio) => {
   listen("change", radio, () => {
@@ -45,6 +65,11 @@ radioButtons.forEach((radio) => {
   });
 });
 
+/*-------------------------------------------------->
+EVENT OBSERVER - SLIDER CONTROL
+
+
+<---------------------------------------------------*/
 
 slider.addEventListener("input", () => {
   targetShape.style.width = `${500 * (slider.value / 100)}px`; 

@@ -19,48 +19,53 @@
   <script src="./src/js/app.js" defer></script>  
 </head>
 <body>
-	<header>
-		<h1></h1>
-	</header>
 	<main class="flex f-col">
+<!---------------------------------------------------------/
+	TARGET SHAPE
+/---------------------------------------------------------->
 		<section class="shape-container flex">
 			<div class="target-shape">
 		</section>
+<!---------------------------------------------------------/
+	TOGGLE CONTROL
+/---------------------------------------------------------->
 		<section class="toggle-display"> 
 			<h2>Toggle</h2>
 			<div class="toggle-container">
 				<input type="checkbox" id="toggle" class="toggle-checkbox">
 				<label for="toggle" class="toggle-label">
-					<span class="toggle-ball"></span>
+					<span class="toggle-ball circle"></span>
 				</label>
 			</div>
-			<p>
-
-			</p>
-	<p class="status"></p> 
 		</section>
+<!---------------------------------------------------------/
+		RADIO CONTROL
+/---------------------------------------------------------->
 		<section class="radio-display">
 			<h2>Radio</h2>
 			<div class="radio-buttons">
 				<label>
 					<input type="radio" name="option" value="1" id="option1">
-					<div class="color-display one"></div>
+					<div class="color-display circle one"></div>
 				</label>
 				<label>
 					<input type="radio" name="option" value="2" id="option2">
-					<div class="color-display two"></div>
+					<div class="color-display circle two"></div>
 				</label>
 				<label>
 					<input type="radio" name="option" value="3" id="option3">
-					<div class="color-display three"></div>
+					<div class="color-display circle three"></div>
 				</label>
 			</div>
 		</section>
+<!---------------------------------------------------------/
+		SLIDER CONTROL
+/---------------------------------------------------------->
 		<section class="slider-display">
 			<h2>Analog</h2>												
 			<div class="slider-container">
 				<input type="range" class="slider" min="0" max="100" value="50">
-					<p><span class="slider-value">50</span>%</p> <!-- This should be calculated-->
+					<p><span class="slider-value">50</span>%</p> <!-- This should be calculated, needs changing in js-->
 			</div>
 		</section>
 		</main>

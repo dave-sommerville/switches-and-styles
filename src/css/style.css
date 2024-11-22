@@ -1,4 +1,11 @@
 @charset "utf-8";
+/*-------------------------------------------------->
+ROOTS
+*Optional
+
+My Preferred method for establishing color palletes
+and various other meassurements 
+<---------------------------------------------------*/
 
 
 :root {
@@ -6,8 +13,19 @@
 	--clr-pink: #daf;
 	--clr-orange: #e42;
 	--clr-green: #4d7;
+	--clr-button: #e3f;
+	--clr-accent: #34d;
+	--clr-modal: #e4d;
 	--app-text-clr: #fefefe;
 }
+/*-------------------------------------------------->
+UTILITY CLASSES
+*Optional
+
+I typically use utility classes sparingly and depending 
+on the project. These are some of my most used and 
+all needed for the project. 
+<---------------------------------------------------*/
 
 
 .flex{
@@ -21,6 +39,11 @@
 	border-radius: 50%;
 }
 
+/*-------------------------------------------------->
+MAIN DOCUMENT STYLES 
+
+
+<---------------------------------------------------*/
 
 body {
 	font-family: "Poppins", Arial, sans-serif;
@@ -37,6 +60,12 @@ main {
 	justify-content: center;
 	align-items: center;
 }
+/*-------------------------------------------------->
+TARGET SHAPE
+
+
+<---------------------------------------------------*/
+
 
 .shape-container {
 	height: 50svh;
@@ -48,22 +77,22 @@ main {
 .target-shape {
 	width: 200px;
 	height: 200px;
-	background-color: #ddf;
+	background-color: var(--clr-orange);
 }
 
 /*-------------------------------------------------->
-
+TOGGLE CONTROL
 
 
 <---------------------------------------------------*/
 
+/* Wrapper styles for page structure */
 .toggle-display, .radio-display, .slider-display {
 	width: 500px;
 	height: 15svh;
-	background-color: #91d5e8;
+	background-color: var(--clr-modal);
 	text-align: center;
 }
-
 
 .toggle-container {
   display: inline-block;
@@ -71,6 +100,7 @@ main {
   width: 70px;
   height: 40px;
 }
+
 /* Hidden checkbox */
 .toggle-checkbox {
   display: none;
@@ -79,7 +109,7 @@ main {
 /* Label (outer oval) */
 .toggle-label {
   display: block;
-  background-color: #425346;
+  background-color: var(--clr-accent);
   border-radius: 30px;
   width: 100%;
   height: 100%;
@@ -94,14 +124,13 @@ main {
   left: 3px;
   width: 33px;
   height: 33px;
-  background-color: white;
-  border-radius: 50%;
+  background-color: var(--clr-button);
   transition: transform 0.3s ease;
 }
 
-/* Toggle on styles */
+/* Translation with absolute positioning to give the toggle appearnace */
 .toggle-checkbox:checked + .toggle-label {
-  background-color: #4caf50; 
+  background-color: var(--clr-green); 
 }
 
 .toggle-checkbox:checked + .toggle-label .toggle-ball {
@@ -109,11 +138,11 @@ main {
 }
 
 /*-------------------------------------------------->
-
+RADIO CONTROLS
 
 
 <---------------------------------------------------*/
-
+/* Selectable input */
 .radio-buttons {
   display: flex;
   gap: 20px;
@@ -126,24 +155,24 @@ label {
   text-align: center;
 }
 
+/* Input style, showing which colour display has been chosen */
+input[type="radio"] {
+  display: none; 
+}
+
+input[type="radio"]:checked + .color-display {
+  border: 0.6px solid var(--clr-accent); 
+}
+
+/* Colour samples themselves used as inputs to be selected */
 .color-display {
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center; 
   align-items: center; 
-  /* border: 0.3px solid #ccc; */
-  border-radius: 50%; /* Optional: gives a rounded appearance to the div */
+	cursor: pointer;
 }
-
-input[type="radio"] {
-  display: none; /* Hide the default radio button */
-}
-
-input[type="radio"]:checked + .color-display {
-  border: 0.6px solid #667; /* Optional: Add a border when selected */
-}
-
 
 .one {
 	background-color: var(--clr-pink);
@@ -158,7 +187,7 @@ input[type="radio"]:checked + .color-display {
 
 
 /*-------------------------------------------------->
-
+SLIDER CONTROL
 
 
 <---------------------------------------------------*/
@@ -168,30 +197,28 @@ input[type="radio"]:checked + .color-display {
   width: 300px;
   margin: 20px auto;
   text-align: center;
-  font-family: Arial, sans-serif;
 }
 
-/* Slider styling */
-.slider {
-	/* Remove default styling for webkit browsers */
+.slider { /*Webkits needed to ensure browsers display slider correctly*/
   -webkit-appearance: none; 
-  width: 100%;
+  width: 100%;					
   height: 10px;
   border-radius: 5px;
-  background: #ddd;
+  background: var(--clr-accent);
   outline: none;
   transition: background-color 0.3s ease;
   margin-bottom: 10px;
 }
 
-/* Slider thumb styling */
+
+/* "Thumb" appearance */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; 
   appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #0077b5; /* For the 'thumb'*/
+  background: var(--clr-btn); 
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
@@ -201,14 +228,12 @@ input[type="radio"]:checked + .color-display {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #0077b5;
+  background: var(--clr-button);
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Change slider bar color on hover or active */
+/* Slider styles for hover/active */
 .slider:active {
-  background: #91d5e8;
+  background: var(--clr-accent);
 }
-
-
