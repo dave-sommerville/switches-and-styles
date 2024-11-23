@@ -51,7 +51,7 @@ radioButtons.forEach((radio) => {
     // Change the targetShape color based on the selected radio button
     switch (radio.value) {
       case "1":
-        targetShape.style.backgroundColor = "var(--clr-pink)";
+        targetShape.style.backgroundColor = "var(--clr-blue)";
         break;
       case "2":
         targetShape.style.backgroundColor = "var(--clr-orange)";
