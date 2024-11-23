@@ -3,7 +3,7 @@
 UTILITY FUNCTIONS
 *optional
 - Very handy for shortening functions
-- Once your used to them, they're hard to live without
+- Once you're used to them, they're hard to live without
 
 <---------------------------------------------------*/
 
@@ -17,7 +17,7 @@ function listen(event, element, callback) {
 
 /*-------------------------------------------------->
 ELEMENT DECLARATIONS
-- These are the html elements linked to the js document
+- These are the HTML elements linked to the js document
 - The utility function keeps area organized and pretty
 - The utility function was not working with the radioButtons
 	element, I believe because of the [name="option"] portion
@@ -32,9 +32,9 @@ const radioButtons = document.querySelectorAll('input[name="option"]');
 
 /*--------------------------------------------------->
 EVENT OBSERVER - TOGGLE CONTROL
-- Any time there is a change in the Toggle button js runs this function
+- Any time there is a change in the Toggle button JS runs this function
 - This will add or remove the circle class accordingly 
-	(established in css utils)
+	(established in CSS utils)
 
 <---------------------------------------------------*/
 
@@ -52,7 +52,7 @@ EVENT OBSERVER - RADIO CONTROL
 - The listen util function is applied anytime one of 
 	the radio buttons is selected 
 - switch case (But NEVER switch(true)!)
-- The strings become the value for the css property
+- The strings become the value for the CSS property
 - The previously established Roots are quite handy
 
 <---------------------------------------------------*/
@@ -77,8 +77,8 @@ radioButtons.forEach((radio) => {
 
 /*-------------------------------------------------->
 EVENT OBSERVER - SLIDER CONTROL
-- Basic html element
-- Stylized with css to improve the UI
+- Basic HTML element
+- Stylized with CSS to improve the UI
 - Any movement along the slider will be counted as value
 - The calculation is used to maintain a reasonable sizing
 - The numerical display could make more sense - may fix later

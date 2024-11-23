@@ -3,8 +3,8 @@
 ROOTS
 *Optional
 
-My Preferred method for establishing color palletes
-and various other meassurements 
+My Preferred method for establishing color palettes
+and various other measurements 
 <---------------------------------------------------*/
 
 
@@ -115,6 +115,7 @@ TARGET SHAPE
 	aspect-ratio: 1 /1;
 	height: auto;
 	background-color: var(--clr-orange);
+	transition: all 0.5s ease;
 }
 
 /*-------------------------------------------------->
@@ -130,10 +131,19 @@ TOGGLE CONTROL
 
 /* Toggle wrapper styles for page structure */
 .toggle-display, .radio-display, .slider-display {
-	width: 50svw;
+	width: 40svw;
 	height: 15svh;
 	background-color: var(--clr-drk-2);
 	text-align: center;
+}
+.toggle-display {
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+.slider-display {
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
 }
 
 .toggle-container {
@@ -183,8 +193,8 @@ TOGGLE CONTROL
 RADIO CONTROLS
 - Radio Controls (in this case) offer broad but exclusive choice
 		- "Only one of any of these" choice 
-- Basic html element
-- Here they are decorated using css to offer a sleeker UI
+- Basic HTML element
+- Here they are decorated using CSS to offer a sleeker UI
 
 <---------------------------------------------------*/
 /* Selectable input */
@@ -228,8 +238,6 @@ input[type="radio"]:checked + .color-display {
 .three {
 	background-color: var(--clr-green);
 }
-
-
 
 /*-------------------------------------------------->
 SLIDER CONTROL
