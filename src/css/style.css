@@ -43,24 +43,30 @@ all needed for the project.
 
 /*-------------------------------------------------->
 MAIN DOCUMENT STYLES 
+*optional 
 
-Fix text sizes 
+
 <---------------------------------------------------*/
 
-body {
+body {		/* Personally, I really like the Poppins font family*/
 	font-family: "Poppins", Arial, sans-serif;
 	color: #fefefe;
 	background-color: var(--clr-drk-1);
 }
 
 h1 {
-	width: 100%;
+	width: 100%; 
 	font-size: clamp(2rem 3.5svw 3.5rem);
+	/* 
+		Clamp is a relatively new CSS feature to assist with responsive 
+		text sizing. Shorthand size (minimum, preferred, maximum)
+	*/	
 	color: var(--app-text-clr);
 	position: fixed;
 	top: 2svh;
 	text-align: center;
 }
+
 h2 {
 	width: 100%;
 	font-size: clamp(1.6rem 2.5svw 2.5rem);
@@ -70,6 +76,7 @@ h2 {
 	text-align: center;
 
 }
+
 h3 {
 	/* color: ; */
 	font-size: clamp(1.4rem 1.8svw 2rem);
@@ -82,9 +89,16 @@ main {
 	position: relative;
 	z-index: 0;
 }
+/* 	The relative and fixed positions of main and headings are superflous
+		I simply wanted the title removed from the flow
+*/
 /*-------------------------------------------------->
 TARGET SHAPE
-
+- Shape wrapper to maintain static elements 
+- Width using svw to ensure responsiveness
+- Consequently aspect ratio and height auto are used to
+	maintain shape integrity
+- Starting colour the middle radio display (no border) *optional
 
 <---------------------------------------------------*/
 
@@ -105,7 +119,12 @@ TARGET SHAPE
 
 /*-------------------------------------------------->
 TOGGLE CONTROL
-
+- Toggle controls offer choice of a Boolean
+		- "This or that" choice
+- Very popular toggle display style
+- Actually a disguised checkbox 
+- Using absolute position and JavaScript to accomplish 
+	a smooth effect
 
 <---------------------------------------------------*/
 
@@ -162,7 +181,10 @@ TOGGLE CONTROL
 
 /*-------------------------------------------------->
 RADIO CONTROLS
-
+- Radio Controls (in this case) offer broad but exclusive choice
+		- "Only one of any of these" choice 
+- Basic html element
+- Here they are decorated using css to offer a sleeker UI
 
 <---------------------------------------------------*/
 /* Selectable input */
@@ -211,7 +233,12 @@ input[type="radio"]:checked + .color-display {
 
 /*-------------------------------------------------->
 SLIDER CONTROL
-
+- Slider controls offer full spectrum of options, inferior for discrete units
+	- "Anywhere within here" choice 
+- Basic HTML element
+- Here we use JavaScript and a calcuation to adjust size
+- Webkits needed for proper browser support 
+	-And to decorate "thumb"
 
 <---------------------------------------------------*/
 
@@ -222,7 +249,7 @@ SLIDER CONTROL
   text-align: center;
 }
 
-.slider { /*Webkits needed to ensure browsers display slider correctly*/
+.slider { 
   -webkit-appearance: none; 
   width: 100%;					
   height: 10px;
